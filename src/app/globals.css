@@ -2,26 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  min-height: 100vh;
+  background: #eeecfe;
+  color: #02010a;
+}
+
+/* color */
+.primary-color{
+  color: #f89a8b;
+}
+.secondary-color{
+  color: #d1cafc;
+}
+.accent-color{
+  color: #2bf346;
+}
+
+/* My container */
+.my-container{
+  @apply max-w-7xl mx-5 md:mx-10 xl:mx-auto
+}
+
+/* my title */
+.my-title{
+  @apply font-bold text-xl md:text-2xl xl:text-4xl
+}
+
+
+/* cmn btn one */
+.cmn-btn-one{
+  @apply bg-[#f89a8b] transition duration-500 hover:bg-[#ff7a65] px-5 py-3 rounded text-slate-50 font-bold
+}
+.cmn-btn-one-outline{
+  @apply bg-transparent border border-[#f89a8b] transition duration-500 hover:bg-[#fb907f] px-5 py-3 rounded text-[#f89a8b] hover:text-slate-50 font-bold
 }
