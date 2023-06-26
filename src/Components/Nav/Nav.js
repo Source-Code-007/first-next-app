@@ -1,5 +1,5 @@
 import Link from "next/link";
-import logo from '../../../assets/code.png'
+import logo from '../../assets/code.png'
 import Image from "next/image";
 
 const Nav = () => {
@@ -21,7 +21,8 @@ const Nav = () => {
                     <ul className="flex items-center gap-2">
                         <li><Link className="px-3 py-2  shadow shadow-slate-500 rounded" href={'/'}>Home</Link></li>
                         <li><Link className="px-3 py-2 shadow shadow-slate-500 rounded" href={'/about'}>About</Link></li>
-                        <li><Link className="px-3 py-2 shadow shadow-slate-500 rounded" href={'contact'}>Contact Us</Link></li>
+                        <li><Link className="px-3 py-2 shadow shadow-slate-500 rounded" href={'/contact'}>Contact Us</Link></li>
+                        <li><Link className="px-3 py-2 shadow shadow-slate-500 rounded" href={'/posts'}>Posts</Link></li>
                     </ul>
                     <button className="cmn-btn-one">Enroll now</button>
                 </div>

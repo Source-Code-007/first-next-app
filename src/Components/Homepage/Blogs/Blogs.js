@@ -1,14 +1,18 @@
 'use client'
 import React, { useEffect, useState } from 'react';
+import Blog from './Blog';
 
 
 const Blogs = () => {
+    
     const [blogs, setBlogs] = useState(null)
+
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/posts')
+        fetch('https://jsonplaceholder.typicode.com/photos')
             .then(response => response.json())
             .then(json => setBlogs(json))
     })
+    
     return (
         <div className='my-container my-16'>
             <div className='text-center space-y-4 my-16 w-3/6 mx-auto'>
@@ -17,12 +21,7 @@ const Blogs = () => {
             </div>
             <div className='grid grid-cols-3 gap-6'>
                 {
-                    blogs?.slice(0, 9).map(blog => {
-                        return <div className='p-5 border bg-slate-50 border-[#2bf346]'>
-                            <h2 className='font-bold text-3xl mb-8'>{blog.title}</h2>
-                            <p>{blog.body}</p>
-                        </div>
-                    })
+                    blogs?.slice(0, 9).map(blog => <Blog blog={blog}></Blog>)
                 }
             </div>
         </div>

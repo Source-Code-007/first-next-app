@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+body {
+  min-height: 100vh;
+  background: #eeecfe;
+  color: #02010a;
+} */
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 120px 24px 160px 24px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.main:before {
+  background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
+  position: absolute;
+  content: "";
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.main:after {
+  content: "";
+  background-image: url("../src/assets/grid.svg");
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.4;
+  filter: invert(1);
+}
+
+.gradient {
+  height: fit-content;
+  z-index: 3;
+  width: 100%;
+  max-width: 640px;
+  background-image: radial-gradient(at 27% 37%,
+      hsla(215, 98%, 61%, 1) 0px,
+      transparent 0%),
+    radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
+    radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
+    radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  filter: blur(100px) saturate(150%);
+  top: 80px;
+  opacity: 0.15;
+}
+
+/* color */
+.primary-color {
+  color: #f89a8b;
+}
+
+.secondary-color {
+  color: #d1cafc;
+}
+
+.accent-color {
+  color: #2bf346;
+}
+
+/* My container */
+.my-container {
+  @apply max-w-7xl mx-5 md:mx-10 xl:mx-auto
+}
+
+/* my title */
+.my-title {
+  @apply font-bold text-xl md:text-2xl xl:text-4xl
+}
+
+
+/* cmn btn one */
+.cmn-btn-one {
+  @apply bg-[#f89a8b] transition duration-500 hover:bg-[#ff7a65] px-5 py-3 rounded text-slate-50 font-bold
+}
+
+.cmn-btn-one-outline {
+  @apply bg-transparent border border-[#f89a8b] transition duration-500 hover:bg-[#fb907f] px-5 py-3 rounded text-[#f89a8b] hover:text-slate-50 font-bold
+}
