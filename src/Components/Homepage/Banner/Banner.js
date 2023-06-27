@@ -3,7 +3,6 @@ import LottiePlayer from "lottie-react";
 import myBannerLottie from "public/lottieAnim/programming-computer.json";
 
 const Banner = () => {
-
     return (
         <div className='bg-[#0E2954] text-white'>
             <div className='h-screen my-container grid items-center grid-cols-2 '>

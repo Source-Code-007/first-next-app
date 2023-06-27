@@ -1,7 +1,7 @@
 import Banner from "@/Components/Homepage/Banner/Banner";
 import Blogs from "@/Components/Homepage/Blogs/Blogs";
 
-export default function Home() {
+const Homepage = () => {
   return (
     <main>
       <Banner></Banner>
@@ -9,3 +9,4 @@ export default function Home() {
     </main>
   )
 }
+export default Homepage
